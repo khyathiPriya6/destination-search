@@ -1,0 +1,26 @@
+/* Write your CSS here */
+.list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-container {
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.heading {
+  font-family: roboto;
+}
+
+.input-style {
+  background-color: #f1f5f9;
+  font-family: roboto;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 8px;
+  width: 20%;
+  color: #252627;
+}

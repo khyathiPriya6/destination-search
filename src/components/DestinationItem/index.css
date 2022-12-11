@@ -1,0 +1,17 @@
+.destination-item-bg {
+  border-radius: 6px;
+  margin: 10px;
+  width: 30%;
+}
+
+.destination-item-img {
+  border-radius: 6px;
+  width: 90%;
+}
+
+.destination-item-heading {
+  font-family: roboto;
+  color: black;
+  margin: 5px;
+  font-weight: bold;
+}
