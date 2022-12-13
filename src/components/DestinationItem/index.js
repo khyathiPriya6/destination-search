@@ -5,14 +5,10 @@ const DestinationItem = props => {
   const {name, imgUrl} = destinationDetails
 
   return (
-    <div className="destination-item-bg">
-      <img
-        src={imgUrl}
-        className="destination-item-img"
-        alt="destinationsList"
-      />
+    <li className="destination-item-bg">
+      <img src={imgUrl} className="destination-item-img" alt={name} />
       <p className="destination-item-heading">{name}</p>
-    </div>
+    </li>
   )
 }
 
