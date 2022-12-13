@@ -1,10 +1,8 @@
-// Write your code here
 import {Component} from 'react'
 
 import DestinationItem from '../DestinationItem/index'
 
 import './index.css'
-import {each} from 'immer/dist/internal'
 
 class DestinationSearch extends Component {
   state = {searchInput: ''}
@@ -16,21 +14,28 @@ class DestinationSearch extends Component {
   render() {
     const {destinationsList} = this.props
     const {searchInput} = this.state
-    const results = destinationsList.filter(eachitem =>
-      eachItem.name.includes(searchInput),
+    const results = destinationsList.filter(eachItem =>
+      eachItem.name.toLowerCase().includes(searchInput.toLowerCase()),
     )
     return (
       <div className="main-container">
         <h1 className="heading">Destination Search</h1>
-        <input
-          type="search"
-          onChange={this.onChangeSearchInput}
-          value={searchInput}
-          className="input-style"
-        />
+        <div className="search-container">
+          <input
+            type="search"
+            onChange={this.onChangeSearchInput}
+            value={searchInput}
+            className="input-style"
+          />
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png"
+            alt="search icon"
+            className="search-icon-style"
+          />
+        </div>
         <ul className="list-container">
           {results.map(eachItem => (
-            <DestinationItem destinationDetails={eachItem} />
+            <DestinationItem destinationDetails={eachItem} key={eachItem.id} />
           ))}
         </ul>
       </div>
